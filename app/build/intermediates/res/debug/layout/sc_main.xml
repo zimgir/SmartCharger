@@ -1,0 +1,135 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="visible"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <SeekBar
+        android:id="@+id/prcbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:layout_below="@+id/prctxt"
+        android:progress="100"
+        android:max="100"
+        android:layout_alignLeft="@+id/exitbtn"
+        android:layout_alignStart="@+id/exitbtn"
+        android:layout_alignRight="@+id/chargebtn"
+        android:layout_alignEnd="@+id/chargebtn" />
+
+    <TextView
+        android:id="@+id/prctxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/prc"
+        android:textColor="#00FF00"
+        android:textSize="80sp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/prcttl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/charge_title"
+        android:textColor="#ff18ff12"
+        android:textSize="25sp"
+        android:layout_above="@+id/prctxt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="35dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:visibility="visible"
+        android:id="@+id/errpanel"
+        android:layout_above="@+id/prcttl">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/usberricn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_marginLeft="31dp"
+            android:layout_marginStart="31dp"
+            android:background="@drawable/usb_err_icon"
+            android:onClick="startErrorInfo"
+            android:contentDescription="@string/usb_err_dscr"
+            android:visibility="invisible"
+            android:clickable="false" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/jackerricn"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="31dp"
+            android:layout_marginEnd="31dp"
+            android:background="@drawable/jack_err_icon"
+            android:onClick="startErrorInfo"
+            android:contentDescription="@string/jack_err_dscr"
+            android:visibility="invisible"
+            android:clickable="false"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/err_clk_txt"
+            android:id="@+id/errtxt"
+            android:textColor="#FF0000"
+            android:textSize="18sp"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/usberricn"
+            android:layout_alignLeft="@+id/usberricn"
+            android:layout_alignStart="@+id/usberricn"
+            android:layout_alignRight="@+id/jackerricn"
+            android:layout_alignEnd="@+id/jackerricn"
+            android:gravity="center"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exitbtn"
+        android:theme="@style/AppTheme"
+        android:background="@drawable/exit_icon"
+        android:onClick="exitMain"
+        android:contentDescription="@string/exit_icn_txt"
+        android:layout_marginBottom="51dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/prcttl"
+        android:layout_alignStart="@+id/prcttl" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chargebtn"
+        android:background="@drawable/charge_icon"
+        android:onClick="startChargeService"
+        android:layout_alignTop="@+id/exitbtn"
+        android:layout_alignRight="@+id/prcttl"
+        android:layout_alignEnd="@+id/prcttl"
+        android:contentDescription="@string/charge_btn" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/infobtn"
+        android:background="@drawable/help_icon"
+        android:layout_alignTop="@+id/chargebtn"
+        android:layout_centerHorizontal="true"
+        android:onClick="startAppInfo"
+        android:contentDescription="@string/info_btn" />
+
+
+</RelativeLayout>
+<!-- From: file:/E:/Projects/Android/Android%20Studio/SmartCharger/app/src/main/res/layout/sc_main.xml -->

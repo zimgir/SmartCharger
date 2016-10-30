@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/app_info_ttl"
+        android:id="@+id/infottltxt"
+        android:textColor="#00FFFF"
+        android:textSize="28sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_above="@+id/scrollView2"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView2"
+        android:layout_below="@+id/ttlImgLeft"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="1900dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/info_main_txt"
+                android:id="@+id/infoMainTxt"
+                android:layout_below="@+id/ttlImgLeft"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:textSize="20sp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/infoExitBtn"
+                android:layout_centerHorizontal="true"
+                android:layout_alignTop="@+id/infoMainTxt"
+                android:layout_marginTop="1800dp"
+                android:background="@drawable/exit_icon"
+                android:onClick="exitInfo"
+                android:contentDescription="@string/exit_btn" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ttlImgLeft"
+        android:layout_toLeftOf="@+id/infottltxt"
+        android:layout_toStartOf="@+id/infottltxt"
+        android:background="@drawable/ic_launcher"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="15dp"
+        android:contentDescription="@string/info_dscr_img_left" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/ttlImgRight"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/infottltxt"
+        android:layout_toEndOf="@+id/infottltxt"
+        android:background="@drawable/charge_icon"
+        android:layout_marginLeft="15dp"
+        android:contentDescription="@string/info_dscr_img_right" />
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/errMainttl">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="1700dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/err_ttl_bt"
+                android:id="@+id/errTtlBt"
+                android:textColor="#FF8F00"
+                android:textSize="23sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/errIcnBt"
+                android:layout_below="@+id/errTtlBt"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/jack_err_icon"
+                android:contentDescription="@string/err_dscr_bt" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/err_info_bt"
+                android:id="@+id/errInfoBt"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_below="@+id/errIcnBt"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/err_ttl_plug"
+                android:id="@+id/errTtlPlug"
+                android:textColor="#FF8F00"
+                android:textSize="23sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_below="@+id/errInfoBt"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/errIcnPlug"
+                android:background="@drawable/usb_err_icon"
+                android:layout_below="@+id/errTtlPlug"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/err_dscr_plug" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/err_info_plug"
+                android:id="@+id/errInfoPlug"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_below="@+id/errIcnPlug"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/err_ttl_terminated"
+                android:id="@+id/errTtlTerminated"
+                android:textColor="#FF8F00"
+                android:textSize="23sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_below="@+id/errInfoPlug"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="20dp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/errIcnTerminated"
+                android:background="@drawable/terminated_icon"
+                android:layout_below="@+id/errTtlTerminated"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:contentDescription="@string/err_dscr_terminated" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/err_info_terminated"
+                android:id="@+id/errInfoTerminated"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:gravity="center_vertical|center_horizontal"
+                android:layout_below="@+id/errIcnTerminated"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/errBtnExit"
+                android:layout_below="@+id/errInfoTerminated"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/exit_icon"
+                android:layout_marginTop="20dp"
+                android:contentDescription="@string/err_dscr_exit"
+                android:onClick="exitErrInfo" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/err_info_ttl"
+        android:id="@+id/errMainttl"
+        android:textColor="#FFFF00"
+        android:textSize="28sp"
+        android:gravity="center_vertical|center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

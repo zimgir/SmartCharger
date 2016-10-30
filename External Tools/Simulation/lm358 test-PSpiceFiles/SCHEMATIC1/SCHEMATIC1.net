@@ -1,0 +1,11 @@
+* source LM358 TEST
+X_U1A         N01919 N00302 VDD 0 N00261 LM358
+V_V1         VDD 0 5.4Vdc
+V_V2         N01919 0  
++SIN 0 30m 5k 0 0 0
+R_R1         N00302 N00261  680k TC=0,0 
+R_R2         0 N00302  6.8k TC=0,0 
+X_U1B         N00261 N00261 VDD 0 N00920 LM358
+R_R3         0 N00261  22k TC=0,0 
+R_R4         N00261 VDD  100k TC=0,0 
+R_R5         0 N00920  10k TC=0,0 
